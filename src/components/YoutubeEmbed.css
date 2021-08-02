@@ -33,7 +33,6 @@
     left: -100%;
   }
 }
-
-/* .audio { */
-/*   display: none; */
-/* } */
+.audio {
+  display: none;
+}
