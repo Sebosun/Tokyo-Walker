@@ -5,7 +5,7 @@ const YoutubeEmbed = ({ embedId, audio }) => {
   // const [isMuted, setIsMuted] = useState(false);
 
   return (
-    <div className={`video-background ${audio && "audio"}`}>
+    <div className={`video-background${audio ? " audio" : ""}`}>
       <div className="video-foreground">
         <iframe
           src={`https://www.youtube.com/embed/${embedId}?autoplay=1${
