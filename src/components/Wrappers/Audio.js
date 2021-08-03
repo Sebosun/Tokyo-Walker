@@ -1,5 +1,6 @@
 import ReactPlayer from "react-player";
 import { useState } from "react";
+import Button from "../ui/Button";
 
 const Audio = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +26,7 @@ const Audio = () => {
           url="https://soundcloud.com/chillhopdotcom/toonorth-aftersome"
         />
       </div>
-      <button onClick={startAudio}>Start</button>
+      <Button onClick={startAudio}>Start</Button>
     </>
   );
 };

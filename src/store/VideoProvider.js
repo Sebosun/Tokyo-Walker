@@ -8,16 +8,22 @@ const CartProvider = (props) => {
     url: "0nTO4zSEpOs",
     start: "0",
   });
+  const [isMuted, setIsMuted] = useState(true);
 
   const changeVideoHandler = (item) => {
     setVideoState(item);
+  };
+  const muteHandler = () => {
+    setIsMuted((prev) => !prev);
   };
 
   const cartContext = {
     name: videoState.name,
     url: videoState.url,
     start: videoState.start,
+    muted: isMuted,
     addVideo: changeVideoHandler,
+    changeMute: muteHandler,
   };
 
   return (

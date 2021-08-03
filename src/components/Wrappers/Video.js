@@ -1,4 +1,3 @@
-import YoutubeEmbed from "../Youtube/YoutubeEmbed";
 import VideoContext from "../../store/video-context";
 import ReactPlayer from "react-player";
 import "./Video.css";
@@ -12,8 +11,9 @@ const Video = () => {
       <div className="video-background">
         <div className="video-foreground">
           <ReactPlayer
+            volume={0.5}
             url={`https://www.youtube.com/watch?v=${videoCtx.url}`}
-            muted={true}
+            muted={videoCtx.muted}
             playing={true}
           />
         </div>
