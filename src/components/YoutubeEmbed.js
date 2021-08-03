@@ -14,6 +14,7 @@ const YoutubeEmbed = ({ embedId, audio }) => {
           frameBorder="0"
           allowFullScreen="1"
           title="Embedded youtube"
+          allow="autoplay"
           width="100%"
           height="100%"
         />
