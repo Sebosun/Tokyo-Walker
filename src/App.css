@@ -1,13 +1,15 @@
 .root {
   box-sizing: border-box;
 }
-.modal {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  font-family: Avenir, Helvetica, sans-serif;
-}
 body {
   overflow: hidden;
+}
+.menuContainer {
+  display: none;
+}
+
+.toggleVisible {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }

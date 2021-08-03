@@ -15,7 +15,9 @@ const Menu = () => {
         <Button onClick={videoCtx.changeMute}>Turn street noise</Button>
       </div>
       <div className="music">
-        <Button onClick={audioCtx.setPlayStatus}>Start</Button>
+        <Button onClick={audioCtx.setPlayStatus}>
+          {`  ${audioCtx.playing ? "Stop music" : "Play music"} `}
+        </Button>
       </div>
     </>
   );
