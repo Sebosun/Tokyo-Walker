@@ -21,6 +21,10 @@
   left: 0;
   z-index: -99;
 }
+
+/* TODO: The responsivity breaks on extremes, like */
+/* ultra wide and minimum height or ultra thin and minimum width */
+/* also fullscreen is broken */
 @media (min-aspect-ratio: 16/9) {
   .video-foreground {
     height: 300%;
@@ -31,6 +35,18 @@
   .video-foreground {
     width: 300%;
     left: -100%;
+  }
+}
+@media (max-width: 600px) {
+  .video-foreground {
+    width: 350%;
+    left: -125%;
+  }
+}
+@media (max-height: 300px) {
+  .video-foreground {
+    height: 500%;
+    top: -200%;
   }
 }
 .audio {
