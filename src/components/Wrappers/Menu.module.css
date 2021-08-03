@@ -1,0 +1,34 @@
+.menu {
+  position: absolute;
+  padding: 10px;
+  height: 100%;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: rgba(33, 33, 33, 0.4);
+}
+
+.video ul {
+  border-radius: 20px;
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+  background-color: rgba(25, 25, 25, 0.8);
+}
+.video li {
+  padding: 2px 2px 2px 5px;
+  color: white;
+  font-size: small;
+  cursor: pointer;
+  border-radius: 10px;
+  /* background-color: rgba(22, 22, 22, 0.8); */
+}
+
+.video li:hover {
+  background-color: rgba(84, 84, 84, 1);
+}
+
+.video button {
+  background-color: grey;
+}
