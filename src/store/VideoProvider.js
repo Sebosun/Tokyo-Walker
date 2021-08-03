@@ -1,35 +1,16 @@
 import React from "react";
-import { useReducer } from "react";
+import { useState } from "react";
 import VideoContext from "./video-context";
 
-//default video playing
-const defaultVideoState = {
-  name: "Shibuya Walking",
-  url: "0nTO4zSEpOs",
-  start: "0",
-};
-
-//
-const videoReducer = (state, action) => {
-  if (action.type === "CHANGE") {
-    console.log("CHANGE BOYS", action);
-    return {
-      name: action.item.name,
-      url: action.item.url,
-      start: action.item.start,
-    };
-  }
-  return defaultVideoState;
-};
-
 const CartProvider = (props) => {
-  const [videoState, dispatchVideoAction] = useReducer(
-    videoReducer,
-    defaultVideoState
-  );
+  const [videoState, setVideoState] = useState({
+    name: "Shibuya Walking",
+    url: "0nTO4zSEpOs",
+    start: "0",
+  });
 
   const changeVideoHandler = (item) => {
-    dispatchVideoAction({ type: "CHANGE", item: item });
+    setVideoState(item);
   };
 
   const cartContext = {
