@@ -1,12 +1,36 @@
 import "./App.css";
 import YoutubeEmbed from "./components/YoutubeEmbed";
 import music from "./data/music";
+import ReactPlayer, { onStart } from "react-player";
+import { useState, useEffect } from "react";
 function App() {
-  console.log(music.lofi);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {}, []);
+
+  const audioStarted = () => {
+    console.log("started");
+  };
+  const startAudio = () => {
+    setIsPlaying((prev) => !prev);
+    setIsMuted((prev) => !prev);
+  };
+
   return (
     <div className="modal">
-      {<YoutubeEmbed embedId="0nTO4zSEpOs" />}
-      {<YoutubeEmbed audio={true} embedId="5yx6BWlEVcY" />}
+      <div class="video">{<YoutubeEmbed embedId="0nTO4zSEpOs" />}</div>
+      <div className="audio-stream">
+        <ReactPlayer
+          onStart={audioStarted}
+          className="audio"
+          playing={isPlaying}
+          volume={1}
+          muted={isMuted}
+          url="https://soundcloud.com/chillhopdotcom/toonorth-aftersome"
+        />
+      </div>
+      <button onClick={startAudio}>Start</button>
     </div>
   );
 }
