@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import VideoContext from "./video-context";
 
-const CartProvider = (props) => {
+const VideoProvider = (props) => {
   const [videoState, setVideoState] = useState({
     name: "Shibuya Walking",
     url: "0nTO4zSEpOs",
@@ -17,7 +17,7 @@ const CartProvider = (props) => {
     setIsMuted((prev) => !prev);
   };
 
-  const cartContext = {
+  const videoContext = {
     name: videoState.name,
     url: videoState.url,
     start: videoState.start,
@@ -27,10 +27,10 @@ const CartProvider = (props) => {
   };
 
   return (
-    <VideoContext.Provider value={cartContext}>
+    <VideoContext.Provider value={videoContext}>
       {props.children}
     </VideoContext.Provider>
   );
 };
 
-export default CartProvider;
+export default VideoProvider;

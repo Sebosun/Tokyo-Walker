@@ -1,17 +1,13 @@
 import ReactPlayer from "react-player";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import AudioContext from "../../store/audio-context";
 import Button from "../ui/Button";
 
 const Audio = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const audioCtx = useContext(AudioContext);
+
   const audioStarted = () => {
     console.log("started");
-  };
-
-  const startAudio = () => {
-    setIsPlaying((prev) => !prev);
-    setIsMuted((prev) => !prev);
   };
 
   return (
@@ -20,13 +16,11 @@ const Audio = () => {
         <ReactPlayer
           onStart={audioStarted}
           className="audio"
-          playing={isPlaying}
+          playing={audioCtx.playing}
           volume={1}
-          muted={isMuted}
-          url="https://soundcloud.com/chillhopdotcom/toonorth-aftersome"
+          url={audioCtx.url}
         />
       </div>
-      <Button onClick={startAudio}>Start</Button>
     </>
   );
 };
