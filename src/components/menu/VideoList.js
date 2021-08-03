@@ -11,7 +11,9 @@ const VideoList = () => {
   const list = Videos.japan.map((item) => {
     return (
       <li>
-        <div onClick={() => changeDisplay(item)}>{item.name}</div>
+        <div role="button" onClick={() => changeDisplay(item)}>
+          {item.name}
+        </div>
       </li>
     );
   });

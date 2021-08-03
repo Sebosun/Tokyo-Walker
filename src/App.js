@@ -17,8 +17,8 @@ function App() {
       <Video />
       <AudioProvider>
         <Audio />
-        <FaEye className="toggleVisible" onClick={menuHandler} />
         {menuVisible && <Menu />}
+        <FaEye className="toggleVisible" onClick={menuHandler} />
       </AudioProvider>
     </VideoProvider>
   );
