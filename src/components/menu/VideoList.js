@@ -1,10 +1,12 @@
 import Videos from "../../data/videos.json";
+import VideoContext from "../../store/video-context";
+import { useContext } from "react";
 // import classes from "VideoList.module.css";
 
 const VideoList = () => {
-  console.log(Videos);
+  const videoCtx = useContext(VideoContext);
   const changeDisplay = (item) => {
-    console.log(item);
+    videoCtx.addVideo(item);
   };
   const list = Videos.japan.map((item) => {
     return (

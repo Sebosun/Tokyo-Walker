@@ -2,18 +2,21 @@ import React from "react";
 import { useReducer } from "react";
 import VideoContext from "./video-context";
 
+//default video playing
 const defaultVideoState = {
   name: "Shibuya Walking",
   url: "0nTO4zSEpOs",
   start: "0",
 };
 
+//
 const videoReducer = (state, action) => {
   if (action.type === "CHANGE") {
+    console.log("CHANGE BOYS", action);
     return {
-      name: action.name,
-      url: action.url,
-      start: action.start,
+      name: action.item.name,
+      url: action.item.url,
+      start: action.item.start,
     };
   }
   return defaultVideoState;
