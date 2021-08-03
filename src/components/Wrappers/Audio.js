@@ -1,5 +1,5 @@
-import ReactPlayer, { onStart } from "react-player";
-import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
+import { useState } from "react";
 
 const Audio = () => {
   const [isPlaying, setIsPlaying] = useState(false);
