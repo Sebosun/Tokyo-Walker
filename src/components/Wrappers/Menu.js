@@ -1,9 +1,10 @@
-import VideoList from "../menu/VideoList";
 import { React, useContext } from "react";
 
-import Button from "../ui/Button";
 import VideoContext from "../../store/video-context";
 import AudioContext from "../../store/audio-context";
+import VideoList from "../menu/VideoList";
+import MusicMenu from "../menu/MusicMenu";
+import Button from "../ui/Button";
 import classes from "./Menu.module.css";
 
 const Menu = () => {
@@ -19,7 +20,9 @@ const Menu = () => {
           ? "Turn On The Street Noise"
           : "Turn Off The Street Noise"}
       </Button>
-      <div className="music"></div>
+      <div className="music">
+        <MusicMenu />
+      </div>
       <Button onClick={audioCtx.setPlayStatus}>
         {`  ${audioCtx.playing ? "Stop music" : "Play music"} `}
       </Button>

@@ -10,6 +10,12 @@ body {
 
 .toggleVisible {
   position: absolute;
+  cursor: pointer;
   top: 10px;
   left: 10px;
+  color: cornflowerblue;
+}
+
+.toggleVisible:hover {
+  color: rgb(80, 100, 227);
 }
