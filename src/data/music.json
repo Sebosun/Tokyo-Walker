@@ -28,5 +28,29 @@
       "name": "Cozy Winter",
       "url": "https://soundcloud.com/lofi_girl/cozy-winter"
     }
+  ],
+  "city-pop": [
+    {
+      "name": "Japanese City Pop Vol. 1",
+      "url": "https://soundcloud.com/user-152162715/japanese-city-pop-vol1"
+    },
+    {
+      "name": "シティポップ: The Lost Decade [90s]",
+      "url": "https://soundcloud.com/vanpaugam/city-pop-the-lost-decade90s"
+    },
+    {
+      "name": "シティポップ Summertime Edition: The Lost Summer",
+      "url": "https://soundcloud.com/vanpaugam/city-pop-summer-edition-iv-the-lost-summer90s"
+    },
+
+    {
+      "name": "The Midnight Randezvous Mk.II",
+      "url": "https://soundcloud.com/kado-bara/midnight-rendezvous-mk-ii"
+    },
+
+    {
+      "name": "Guise",
+      "url": "https://soundcloud.com/kado-bara/kadobara-guise-city-pop-mix"
+    }
   ]
 }
