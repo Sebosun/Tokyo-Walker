@@ -1,15 +1,7 @@
 .musicNavigation {
   display: flex;
-
-  justify-content: space-between;
-  /* this one is temoprary too */
   justify-content: center;
   background: rgba(255, 99, 124, 0.7);
-  /* background: linear-gradient( */
-  /*   153deg, */
-  /*   rgba(255, 83, 124, 0.5) 0%, */
-  /*   rgba(255, 183, 197, 0.5) 100% */
-  /* ); */
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -23,6 +15,14 @@
   font-size: 2rem;
   /* temporary */
   cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.type {
+  color: white;
+  margin: 0.6em;
 }
 
 input[type="range"] {

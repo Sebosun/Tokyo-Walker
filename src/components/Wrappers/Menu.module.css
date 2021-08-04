@@ -17,19 +17,11 @@
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-/* margin top creates as much vertical space as possible so that it can go to the bottom */
-
-.github {
-  margin-top: auto;
-  align-self: center;
-  margin-bottom: 20px;
-}
-
-.github a {
-  text-decoration: none;
+.title {
+  font-size: 2em;
+  color: rgb(255, 83, 124);
+  text-shadow: 2px 2px rgba(0, 0, 0, 1);
+  text-align: center;
+  margin-top: 5px;
+  /* padding: 20px; */
 }

@@ -1,4 +1,9 @@
 .Card {
-  background-color: #fff;
-  opacity: 80%;
+  color: white;
+  background: rgba(255, 99, 124, 0.7);
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }

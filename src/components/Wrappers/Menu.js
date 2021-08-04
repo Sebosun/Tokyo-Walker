@@ -4,7 +4,6 @@ import VideoContext from "../../store/video-context";
 import AudioContext from "../../store/audio-context";
 import VideoList from "../menu/VideoList";
 import MusicMenu from "../menu/MusicMenu";
-import Button from "../ui/Button";
 import Github from "../Wrappers/Github";
 import Buttons from "../Wrappers/Buttons";
 
@@ -16,6 +15,7 @@ const Menu = () => {
 
   return (
     <div className={classes.menu}>
+      <p className={classes.title}>Tokyo Walker</p>
       <VideoList />
       <Buttons
         changeMute={videoCtx.changeMute}
@@ -23,7 +23,6 @@ const Menu = () => {
         setPlayStatus={audioCtx.setPlayStatus}
         playing={audioCtx.playing}
       />
-
       <MusicMenu />
       <Github />
     </div>
