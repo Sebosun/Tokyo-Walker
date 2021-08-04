@@ -23,7 +23,8 @@ const Menu = () => {
         setPlayStatus={audioCtx.setPlayStatus}
         playing={audioCtx.playing}
       />
-      <MusicMenu />
+      {/* TODO transform animation here */}
+      {audioCtx.playing && <MusicMenu />}
       <Github />
     </div>
   );

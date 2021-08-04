@@ -37,13 +37,9 @@ const MusicMenu = () => {
 
   return (
     <div>
-      <div className={classes.musicNavigation}>
-        <div role="button" onClick={selectRandom} className={classes.name}>
-          {audioCtx.name}
-        </div>
-      </div>
+      <Card className={classes.name}>{audioCtx.name}</Card>
       <VolumeControl onVolumeChange={onVolumeChange} volume={audioCtx.volume} />
-      <p className={classes.type}>Select music genre</p>
+      <p className={classes.type}>Select music genre:</p>
       <div className={classes.wrapper}>{musicTypesGen()}</div>
     </div>
   );

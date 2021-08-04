@@ -1,20 +1,8 @@
-.musicNavigation {
-  display: flex;
-  justify-content: center;
-  background: rgba(255, 99, 124, 0.7);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .name {
   font-weight: bold;
   font: inherit;
-  color: white;
+  text-align: center;
   font-size: 2rem;
-  /* temporary */
-  cursor: pointer;
 }
 .wrapper {
   display: flex;
@@ -22,7 +10,7 @@
 }
 .type {
   color: white;
-  margin: 0.6em;
+  margin: 10px 0 0 10px;
 }
 
 input[type="range"] {
