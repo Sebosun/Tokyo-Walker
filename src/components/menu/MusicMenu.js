@@ -12,8 +12,8 @@ const MusicMenu = (props) => {
   }
 
   const selectRandom = () => {
-    console.log(music.lofi.length);
-    audioCtx.changeAudio(music.lofi[getRandomInt(7)]);
+    const lofiLenght = music.lofi.length;
+    audioCtx.changeAudio(music.lofi[getRandomInt(lofiLenght)]);
   };
   return (
     <div>
@@ -22,7 +22,7 @@ const MusicMenu = (props) => {
         <div onClick={selectRandom} className={classes.name}>
           {audioCtx.name}
         </div>
-        {<Button onClick={() => console.log(music.lofi.length)}>next</Button>}
+        {/* {<Button> console.log(music.lofi.length)}>next</Button>} */}
       </div>
       {/* <a href={audioCtx.url}>Source link</a> */}
     </div>
