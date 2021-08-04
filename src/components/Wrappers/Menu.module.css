@@ -4,7 +4,7 @@
   height: 100%;
   width: 350px;
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
   flex-direction: column;
   background-color: rgba(33, 33, 33, 0.4);
   flex: 1;
@@ -19,18 +19,9 @@
 }
 
 /* margin top creates as much vertical space as possible so that it can go to the bottom */
-.github {
-  margin-top: auto;
-  align-self: center;
-  margin-bottom: 20px;
-}
-
-.github a {
-  text-decoration: none;
-}
 
 .video {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .video ul {
   border-radius: 20px;
@@ -38,6 +29,7 @@
   padding: 10px;
   list-style-type: none;
   background-color: rgba(25, 25, 25, 0.8);
+  line-height: 0.9em;
 }
 .video li {
   padding: 2px 2px 2px 5px;
@@ -56,4 +48,14 @@
 
 .video button {
   background-color: grey;
+}
+
+.github {
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.github a {
+  text-decoration: none;
 }

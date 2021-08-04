@@ -8,12 +8,12 @@
 .label {
   color: white;
   padding: 10px;
-  background: rgba(255, 83, 124, 0.5);
+  background: rgba(255, 99, 124, 0.7);
   border-radius: 5px;
 }
 
 .volume {
-  color: rgba(255, 83, 124, 0.5);
+  /* color: rgba(255, 99, 124, 0.7); */
 }
 
 input[type="range"] {
@@ -25,7 +25,7 @@ input[type="range"]:focus {
   outline: none;
 }
 input[type="range"]::-webkit-slider-runnable-track {
-  background: rgba(255, 83, 124, 0.4);
+  background: rgba(255, 99, 124, 1);
   border: 0;
   border-radius: 4.9px;
   width: 100%;
@@ -44,7 +44,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-track {
-  background: rgba(255, 83, 124, 0.4);
+  background: rgba(255, 99, 124, 1);
   border: 0;
   border-radius: 4.9px;
   width: 100%;
@@ -74,7 +74,7 @@ input[type="range"]::-ms-fill-lower {
   border-radius: 9.8px;
 }
 input[type="range"]::-ms-fill-upper {
-  background: rgba(255, 83, 124, 0.4);
+  background: rgba(255, 99, 124, 1);
   border: 0;
   border-radius: 9.8px;
 }
@@ -89,7 +89,7 @@ input[type="range"]::-ms-thumb {
   /*Needed to keep the Edge thumb centred*/
 }
 input[type="range"]:focus::-ms-fill-lower {
-  background: rgba(255, 83, 124, 0.4);
+  background: rgba(255, 99, 124, 1);
 }
 input[type="range"]:focus::-ms-fill-upper {
   background: #ff537c;
