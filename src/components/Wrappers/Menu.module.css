@@ -4,51 +4,25 @@
   height: 100%;
   width: 350px;
   display: flex;
-  /* gap: 30px; */
   flex-direction: column;
   background-color: rgba(33, 33, 33, 0.4);
   flex: 1;
   overflow: scroll;
   overflow-x: hidden;
-  /* lol needed this because firefox is broken */
   scrollbar-width: none;
+  /* lol needed this because firefox is broken */
 }
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 /* margin top creates as much vertical space as possible so that it can go to the bottom */
-
-.video {
-  margin-top: 50px;
-}
-.video ul {
-  border-radius: 20px;
-  margin: 0;
-  padding: 10px;
-  list-style-type: none;
-  background-color: rgba(25, 25, 25, 0.8);
-  line-height: 0.9em;
-}
-.video li {
-  padding: 2px 2px 2px 5px;
-  color: rgb(255, 183, 197);
-  font-size: 0.75em;
-  cursor: pointer;
-  border-radius: 10px;
-  font-weight: lighter;
-  /* background-color: rgba(22, 22, 22, 0.8); */
-}
-
-.video li:hover {
-  background-color: rgba(84, 84, 84, 1);
-  font-weight: bold;
-}
-
-.video button {
-  background-color: grey;
-}
 
 .github {
   margin-top: auto;

@@ -1,0 +1,29 @@
+.video {
+  margin-top: 50px;
+}
+.video ul {
+  border-radius: 20px;
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+  background-color: rgba(25, 25, 25, 0.8);
+  line-height: 0.9em;
+}
+.video li {
+  padding: 2px 2px 2px 5px;
+  color: rgb(255, 183, 197);
+  font-size: 0.75em;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: lighter;
+  /* background-color: rgba(22, 22, 22, 0.8); */
+}
+
+.video li:hover {
+  background-color: rgba(84, 84, 84, 1);
+  font-weight: bold;
+}
+
+.video button {
+  background-color: grey;
+}

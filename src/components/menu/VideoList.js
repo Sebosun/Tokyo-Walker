@@ -1,5 +1,7 @@
 import Videos from "../../data/videos.json";
 import VideoContext from "../../store/video-context";
+import classes from "./VideoList.module.css";
+
 import { useContext } from "react";
 
 const VideoList = () => {
@@ -17,7 +19,7 @@ const VideoList = () => {
     );
   });
   return (
-    <div className="videoList">
+    <div className={classes.video}>
       <ul>{list}</ul>
     </div>
   );

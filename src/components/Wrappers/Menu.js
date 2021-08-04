@@ -5,8 +5,10 @@ import AudioContext from "../../store/audio-context";
 import VideoList from "../menu/VideoList";
 import MusicMenu from "../menu/MusicMenu";
 import Button from "../ui/Button";
+import Github from "../Wrappers/Github";
+import Buttons from "../Wrappers/Buttons";
+
 import classes from "./Menu.module.css";
-import { FiGithub } from "react-icons/fi";
 
 const Menu = () => {
   const videoCtx = useContext(VideoContext);
@@ -14,30 +16,16 @@ const Menu = () => {
 
   return (
     <div className={classes.menu}>
-      <div className={classes.video}>
-        <VideoList />
-      </div>
+      <VideoList />
+      <Buttons
+        changeMute={videoCtx.changeMute}
+        muted={videoCtx.muted}
+        setPlayStatus={audioCtx.setPlayStatus}
+        playing={audioCtx.playing}
+      />
 
-      <Button onClick={videoCtx.changeMute}>
-        {videoCtx.muted
-          ? "Turn On The Street Noise"
-          : "Turn Off The Street Noise"}
-      </Button>
-
-      <div className="music">
-        <MusicMenu />
-      </div>
-
-      <Button onClick={audioCtx.setPlayStatus}>
-        {`  ${audioCtx.playing ? "Stop music" : "Play music"} `}
-      </Button>
-
-      <a
-        href="https://github.com/Sebosun/Tokyo-Walker"
-        className={classes.github}
-      >
-        <FiGithub color="black" />
-      </a>
+      <MusicMenu />
+      <Github />
     </div>
   );
 };
