@@ -7,17 +7,24 @@ import music from "../../data/music.json";
 const MusicMenu = (props) => {
   const audioCtx = useContext(AudioContext);
 
-  const selectRandom = (item) => {
-    console.log(item);
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  const selectRandom = () => {
+    console.log(music.lofi.length);
+    audioCtx.changeAudio(music.lofi[getRandomInt(7)]);
   };
   return (
     <div>
       <div style={{ fontSize: "10px" }} className={classes.musicNavigation}>
-        <Button>prev</Button>
-        <div className={classes.name}>{audioCtx.name}</div>
-        <Button>next</Button>
+        {/* <Button>prev</Button> */}
+        <div onClick={selectRandom} className={classes.name}>
+          {audioCtx.name}
+        </div>
+        {<Button onClick={() => console.log(music.lofi.length)}>next</Button>}
       </div>
-      {/* <a href="">Source link</a> */}
+      {/* <a href={audioCtx.url}>Source link</a> */}
     </div>
   );
 };

@@ -1,7 +1,9 @@
 .musicNavigation {
   display: flex;
-  /* justify-content: center; */
+
   justify-content: space-between;
+  /* this one is temoprary too */
+  justify-content: center;
 }
 
 .name {
@@ -11,4 +13,6 @@
   padding: 10px;
   border-radius: 5px;
   box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 1);
+  /* temporary */
+  cursor: pointer;
 }

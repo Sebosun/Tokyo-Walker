@@ -10,6 +10,7 @@ const AudioProvider = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const changeAudioHandler = (item) => {
+    console.log("Change boys", item);
     setAudioState(item);
   };
   const playAudioHandler = () => {
@@ -20,9 +21,9 @@ const AudioProvider = (props) => {
     name: audioState.name,
     url: audioState.url,
     start: audioState.start,
-    addAudio: changeAudioHandler,
     playing: isPlaying,
     setPlayStatus: playAudioHandler,
+    changeAudio: changeAudioHandler,
   };
   return (
     <AudioContext.Provider value={audioContext}>
