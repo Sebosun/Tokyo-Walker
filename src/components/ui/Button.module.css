@@ -1,4 +1,8 @@
 .button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   cursor: pointer;
   font: inherit;
   border: none;
@@ -13,11 +17,9 @@
   );
   padding: 0.35rem 1rem;
 
+  text-shadow: 2px 2px rgba(0, 0, 0, 1);
   margin-top: 25px;
   margin-bottom: 25px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   border-radius: 25px;
 
   /* font-weight: bold; */
