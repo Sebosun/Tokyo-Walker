@@ -12,7 +12,9 @@ const Video = () => {
         <div className="video-foreground">
           <ReactPlayer
             volume={0.5}
-            url={`https://www.youtube.com/watch?v=${videoCtx.url}`}
+            url={`https://www.youtube.com/watch?v=${
+              videoCtx.url
+            }${`?t=${videoCtx.start}`}`}
             muted={videoCtx.muted}
             playing={true}
           />

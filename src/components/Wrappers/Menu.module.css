@@ -42,7 +42,7 @@
 .video li {
   padding: 2px 2px 2px 5px;
   color: rgb(255, 183, 197);
-  font-size: small;
+  font-size: 0.75em;
   cursor: pointer;
   border-radius: 10px;
   font-weight: lighter;

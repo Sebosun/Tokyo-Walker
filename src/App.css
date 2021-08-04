@@ -3,6 +3,7 @@
 body {
   overflow: hidden;
   font-family: "Dosis", sans-serif;
+  font-size: 22px;
 }
 .root {
   box-sizing: border-box;
