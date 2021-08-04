@@ -1,8 +1,11 @@
-.root {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+
 body {
   overflow: hidden;
+  font-family: "Dosis", sans-serif;
+}
+.root {
+  box-sizing: border-box;
 }
 
 .toggleVisible {
@@ -10,9 +13,9 @@ body {
   cursor: pointer;
   top: 10px;
   left: 10px;
-  color: cornflowerblue;
+  /* color: cornflowerblue; */
 }
 
 .toggleVisible:hover {
-  color: rgb(80, 100, 227);
+  color: #ffb7c5;
 }

@@ -23,7 +23,7 @@ const MusicMenu = () => {
   return (
     <div>
       <div style={{ fontSize: "10px" }} className={classes.musicNavigation}>
-        <div onClick={selectRandom} className={classes.name}>
+        <div role="button" onClick={selectRandom} className={classes.name}>
           {audioCtx.name}
         </div>
       </div>
