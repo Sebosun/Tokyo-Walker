@@ -7,6 +7,16 @@
   gap: 10px;
   flex-direction: column;
   background-color: rgba(33, 33, 33, 0.4);
+  flex: 1;
+}
+.github {
+  position: absolute;
+  left: 150px;
+  bottom: 40px;
+}
+
+.github a {
+  text-decoration: none;
 }
 
 .video {
