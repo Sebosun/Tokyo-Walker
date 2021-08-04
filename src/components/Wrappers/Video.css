@@ -43,7 +43,7 @@
     left: -125%;
   }
 }
-@media (max-height: 300px) {
+@media (max-height: 400px) {
   .video-foreground {
     height: 500%;
     top: -200%;
