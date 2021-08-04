@@ -3,11 +3,13 @@ import classes from "./VolumeControl.module.css";
 const VolumeControl = (props) => {
   return (
     <div className={classes.volumeControl}>
-      <label htmlFor="volume">Volume</label>
+      <label className={classes.label} htmlFor="volume">
+        Volume
+      </label>
       <input
         type="range"
         className="volume"
-        name="volume"
+        name={classes.volume}
         min="0"
         max="1"
         step="0.01"
