@@ -8,13 +8,17 @@ const AudioProvider = (props) => {
     url: "https://soundcloud.com/chillhopdotcom/toonorth-aftersome",
   });
   const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(50);
 
   const changeAudioHandler = (item) => {
-    console.log("Change boys", item);
     setAudioState(item);
   };
   const playAudioHandler = () => {
     setIsPlaying((prev) => !prev);
+  };
+  const changeVolumeHandler = (volume) => {
+    console.log(volume);
+    setVolume(volume);
   };
 
   const audioContext = {
@@ -24,6 +28,8 @@ const AudioProvider = (props) => {
     playing: isPlaying,
     setPlayStatus: playAudioHandler,
     changeAudio: changeAudioHandler,
+    volume: volume,
+    changeVolume: changeVolumeHandler,
   };
   return (
     <AudioContext.Provider value={audioContext}>

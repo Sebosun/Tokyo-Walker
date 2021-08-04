@@ -17,7 +17,7 @@ const Audio = () => {
           onStart={audioStarted}
           className="audio"
           playing={audioCtx.playing}
-          volume={1}
+          volume={audioCtx.volume}
           url={audioCtx.url}
         />
       </div>

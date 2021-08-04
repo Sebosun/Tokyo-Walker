@@ -1,7 +1,6 @@
 import Videos from "../../data/videos.json";
 import VideoContext from "../../store/video-context";
 import { useContext } from "react";
-// import classes from "VideoList.module.css";
 
 const VideoList = () => {
   const videoCtx = useContext(VideoContext);
@@ -10,7 +9,7 @@ const VideoList = () => {
   };
   const list = Videos.japan.map((item) => {
     return (
-      <li>
+      <li key={item.url}>
         <div role="button" onClick={() => changeDisplay(item)}>
           {item.name}
         </div>
