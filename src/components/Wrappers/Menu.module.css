@@ -2,14 +2,16 @@
   position: absolute;
   padding: 10px;
   height: 100%;
-  width: 300px;
+  width: 350px;
   display: flex;
-  gap: 10px;
+  gap: 30px;
   flex-direction: column;
   background-color: rgba(33, 33, 33, 0.4);
   flex: 1;
   overflow: scroll;
   overflow-x: hidden;
+  /* lol needed this because firefox is broken */
+  scrollbar-width: none;
 }
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
@@ -39,15 +41,17 @@
 }
 .video li {
   padding: 2px 2px 2px 5px;
-  color: white;
+  color: rgb(255, 183, 197);
   font-size: small;
   cursor: pointer;
   border-radius: 10px;
+  font-weight: lighter;
   /* background-color: rgba(22, 22, 22, 0.8); */
 }
 
 .video li:hover {
   background-color: rgba(84, 84, 84, 1);
+  font-weight: bold;
 }
 
 .video button {

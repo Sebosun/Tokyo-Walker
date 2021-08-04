@@ -4,9 +4,6 @@
 body {
   overflow: hidden;
 }
-.menuContainer {
-  display: none;
-}
 
 .toggleVisible {
   position: absolute;
