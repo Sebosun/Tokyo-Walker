@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tokyo-walker/static/css/main.a2c8b46c.chunk.css",
+    "main.css": "/tokyo-walker/static/css/main.606594d9.chunk.css",
     "main.js": "/tokyo-walker/static/js/main.3db32eb4.chunk.js",
     "main.js.map": "/tokyo-walker/static/js/main.3db32eb4.chunk.js.map",
     "runtime-main.js": "/tokyo-walker/static/js/runtime-main.173271e0.js",
@@ -10,13 +10,13 @@
     "static/js/3.bb36d8ba.chunk.js": "/tokyo-walker/static/js/3.bb36d8ba.chunk.js",
     "static/js/3.bb36d8ba.chunk.js.map": "/tokyo-walker/static/js/3.bb36d8ba.chunk.js.map",
     "index.html": "/tokyo-walker/index.html",
-    "static/css/main.a2c8b46c.chunk.css.map": "/tokyo-walker/static/css/main.a2c8b46c.chunk.css.map",
+    "static/css/main.606594d9.chunk.css.map": "/tokyo-walker/static/css/main.606594d9.chunk.css.map",
     "static/js/2.aae89ac6.chunk.js.LICENSE.txt": "/tokyo-walker/static/js/2.aae89ac6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.173271e0.js",
     "static/js/2.aae89ac6.chunk.js",
-    "static/css/main.a2c8b46c.chunk.css",
+    "static/css/main.606594d9.chunk.css",
     "static/js/main.3db32eb4.chunk.js"
   ]
 }
