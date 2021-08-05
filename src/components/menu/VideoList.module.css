@@ -1,5 +1,6 @@
 .videoList {
   margin-top: 50px;
+  min-height: 50px;
   max-height: 250px;
   border-radius: 20px;
   padding: 10px;
