@@ -16,19 +16,19 @@ const MusicMenu = () => {
     return Math.floor(Math.random() * max);
   }
 
-  const selectRandom = (property) => {
-    console.log(property);
-    const lofiLenght = music[property].length;
-    audioCtx.changeAudio(music[property][getRandomInt(lofiLenght)]);
+  const selectRandom = (genre) => {
+    const genreLength = music[genre].length;
+    audioCtx.changeAudio(music[genre][getRandomInt(genreLength)]);
+    console.log(genre);
+    audioCtx.changeGenre(genre);
   };
 
   const musicTypesGen = () => {
     let content = [];
-    for (let property in music) {
-      console.log(property);
+    for (let genre in music) {
       content.push(
-        <Card onClick={() => selectRandom(property)} key={property}>
-          {property}
+        <Card onClick={() => selectRandom(genre)} key={genre}>
+          {genre}
         </Card>
       );
     }
@@ -39,7 +39,7 @@ const MusicMenu = () => {
     <div>
       <Card className={classes.name}>{audioCtx.name}</Card>
       <VolumeControl onVolumeChange={onVolumeChange} volume={audioCtx.volume} />
-      <p className={classes.type}>Select music genre:</p>
+      <p className={classes.type}>select music genre:</p>
       <div className={classes.wrapper}>{musicTypesGen()}</div>
     </div>
   );
