@@ -39,10 +39,13 @@ const VideoList = () => {
   //maps out a list of videos from the state of current country
   const list = videos[videoCtx.country].map((item) => {
     return (
-      <li key={item.url}>
-        <div role="button" onClick={() => changeDisplay(item)}>
-          {item.name}
-        </div>
+      <li
+        className={videoCtx.name === item.name ? classes.bold : null}
+        key={item.url}
+        onClick={() => changeDisplay(item)}
+        role="button"
+      >
+        {item.name}
       </li>
     );
   });
