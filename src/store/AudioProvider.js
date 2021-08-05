@@ -8,7 +8,7 @@ const AudioProvider = (props) => {
     url: "https://soundcloud.com/chillhopdotcom/toonorth-aftersome",
   });
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(50);
+  const [volume, setVolume] = useState(100);
   const [genre, setGenre] = useState("lofi");
 
   const changeAudioHandler = (item) => {

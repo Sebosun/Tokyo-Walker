@@ -6,7 +6,6 @@ import { BiArrowBack } from "react-icons/bi";
 import { useContext, useState } from "react";
 
 const VideoList = () => {
-  const [currentCountry, setCurrentCountry] = useState("japan");
   const [displayCountry, setDisplayCountry] = useState(true);
   const videoCtx = useContext(VideoContext);
 
@@ -15,7 +14,7 @@ const VideoList = () => {
   };
 
   const changeCountry = (country) => {
-    setCurrentCountry(country);
+    videoCtx.changeCountry(country);
     setListDisplayType();
   };
 
@@ -23,6 +22,7 @@ const VideoList = () => {
     setDisplayCountry((prev) => !prev);
   };
 
+  // for each key in video.json maps out a list item, which if clicked reveals list menu
   const videoCategoriesGen = () => {
     let content = [];
     for (let property in videos) {
@@ -36,7 +36,8 @@ const VideoList = () => {
     return content;
   };
 
-  const list = videos[currentCountry].map((item) => {
+  //maps out a list of videos from the state of current country
+  const list = videos[videoCtx.country].map((item) => {
     return (
       <li key={item.url}>
         <div role="button" onClick={() => changeDisplay(item)}>
@@ -45,6 +46,7 @@ const VideoList = () => {
       </li>
     );
   });
+
   return (
     <div className={classes.videoList}>
       <ul>

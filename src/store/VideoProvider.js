@@ -9,12 +9,16 @@ const VideoProvider = (props) => {
     start: "924",
   });
   const [isMuted, setIsMuted] = useState(true);
+  const [country, setCountry] = useState("japan");
 
   const changeVideoHandler = (item) => {
     setVideoState(item);
   };
   const muteHandler = () => {
     setIsMuted((prev) => !prev);
+  };
+  const changeCountry = (country) => {
+    setCountry(country);
   };
 
   const videoContext = {
@@ -24,6 +28,8 @@ const VideoProvider = (props) => {
     muted: isMuted,
     addVideo: changeVideoHandler,
     changeMute: muteHandler,
+    country: country,
+    changeCountry: changeCountry,
   };
 
   return (
