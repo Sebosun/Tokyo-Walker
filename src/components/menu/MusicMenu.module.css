@@ -13,6 +13,8 @@
   margin: 10px 0 0 10px;
 }
 
+/* all of this absically to set one range input to fit the site lol */
+
 input[type="range"] {
   margin: 4.05px 0;
   background-color: transparent;

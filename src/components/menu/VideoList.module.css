@@ -10,6 +10,7 @@
 }
 
 .videoList li {
+  text-transform: lowercase;
   padding: 2px 2px 2px 15px;
   color: rgb(255, 183, 197);
   font-size: 0.75em;
