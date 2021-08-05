@@ -1,7 +1,6 @@
 import ReactPlayer from "react-player";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import AudioContext from "../../store/audio-context";
-import Button from "../ui/Button";
 
 const Audio = () => {
   const audioCtx = useContext(AudioContext);

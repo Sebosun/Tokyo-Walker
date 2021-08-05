@@ -1,12 +1,13 @@
 import videos from "../../data/videos.json";
 import VideoContext from "../../store/video-context";
 import classes from "./VideoList.module.css";
+import { BiArrowBack } from "react-icons/bi";
 
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 
 const VideoList = () => {
   const [currentCountry, setCurrentCountry] = useState("japan");
-  const [videosList, setVideosList] = useState([]);
+  const [displayCountry, setDisplayCountry] = useState(true);
   const videoCtx = useContext(VideoContext);
 
   const changeDisplay = (item) => {
@@ -15,15 +16,21 @@ const VideoList = () => {
 
   const changeCountry = (country) => {
     setCurrentCountry(country);
+    setListDisplayType();
+  };
+
+  const setListDisplayType = () => {
+    setDisplayCountry((prev) => !prev);
   };
 
   const videoCategoriesGen = () => {
     let content = [];
     for (let property in videos) {
       content.push(
-        <div onClick={() => changeCountry(property)} key={property}>
+        <li onClick={() => changeCountry(property)} key={property}>
+          {`> `}
           {property}
-        </div>
+        </li>
       );
     }
     return content;
@@ -39,12 +46,22 @@ const VideoList = () => {
     );
   });
   return (
-    <>
-      <div className={classes.video}>
-        <ul>{list}</ul>
-      </div>
-      {videoCategoriesGen()}
-    </>
+    <div className={classes.videoList}>
+      <ul>
+        {displayCountry ? (
+          videoCategoriesGen()
+        ) : (
+          <>
+            <BiArrowBack
+              role="button"
+              onClick={setListDisplayType}
+              className={classes.icon}
+            />
+            {list}
+          </>
+        )}
+      </ul>
+    </div>
   );
 };
 export default VideoList;
