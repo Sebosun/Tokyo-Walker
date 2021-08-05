@@ -1,8 +1,10 @@
 .name {
-  font-weight: bold;
-  font: inherit;
   text-align: center;
+  text-transform: lowercase;
+
+  font: inherit;
   font-size: 2rem;
+  font-weight: bold;
 }
 .wrapper {
   display: flex;

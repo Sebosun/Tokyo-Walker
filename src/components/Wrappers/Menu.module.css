@@ -3,25 +3,27 @@
   padding: 10px;
   height: 100%;
   width: 350px;
+
   display: flex;
-  flex-direction: column;
-  background-color: rgba(33, 33, 33, 0.4);
   flex: 1;
+  flex-direction: column;
+
   overflow: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
-  /* lol needed this because firefox is broken */
+
+  background-color: rgba(33, 33, 33, 0.4);
 }
+
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 .title {
+  margin-top: 5px;
+  text-align: center;
   font-size: 2em;
   color: rgb(255, 83, 124);
   text-shadow: 2px 2px rgba(0, 0, 0, 1);
-  text-align: center;
-  margin-top: 5px;
-  /* padding: 20px; */
 }
