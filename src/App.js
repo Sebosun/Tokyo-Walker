@@ -13,14 +13,16 @@ function App() {
     setMenuVisible((prev) => !prev);
   };
   return (
-    <VideoProvider>
-      <Video />
-      <AudioProvider>
-        <Audio />
-        {menuVisible && <Menu />}
-        <FaEye role="button" className="toggleVisible" onClick={menuHandler} />
-      </AudioProvider>
-    </VideoProvider>
+    <>
+      <VideoProvider>
+        <AudioProvider>
+          <Video />
+          <Audio />
+          {menuVisible && <Menu />}
+        </AudioProvider>
+      </VideoProvider>
+      <FaEye role="button" className="toggleVisible" onClick={menuHandler} />
+    </>
   );
 }
 

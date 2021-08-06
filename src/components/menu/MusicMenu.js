@@ -12,22 +12,11 @@ const MusicMenu = () => {
     audioCtx.changeVolume(e.target.value);
   };
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-
-  const selectRandom = (genre) => {
-    const genreLength = music[genre].length;
-    audioCtx.changeAudio(music[genre][getRandomInt(genreLength)]);
-    console.log(genre);
-    audioCtx.changeGenre(genre);
-  };
-
   const musicTypesGen = () => {
     let content = [];
     for (let genre in music) {
       content.push(
-        <Card onClick={() => selectRandom(genre)} key={genre}>
+        <Card onClick={() => audioCtx.selectRandom(genre)} key={genre}>
           {genre}
         </Card>
       );
