@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import VideoContext from "./video-context";
+import videos from "../data/videos.json";
 
 const VideoProvider = (props) => {
   const [videoState, setVideoState] = useState({
@@ -21,6 +22,15 @@ const VideoProvider = (props) => {
     setCountry(country);
   };
 
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  const selectRandom = () => {
+    const countryLength = videos[country].length;
+    changeVideoHandler(videos[country][getRandomInt(countryLength)]);
+  };
+
   const videoContext = {
     name: videoState.name,
     url: videoState.url,
@@ -30,6 +40,7 @@ const VideoProvider = (props) => {
     changeMute: muteHandler,
     country: country,
     changeCountry: changeCountry,
+    selectRandom: selectRandom,
   };
 
   return (
