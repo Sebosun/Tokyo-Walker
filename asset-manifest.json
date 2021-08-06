@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tokyo-walker/static/css/main.929cfaa9.chunk.css",
-    "main.js": "/tokyo-walker/static/js/main.99e14c59.chunk.js",
-    "main.js.map": "/tokyo-walker/static/js/main.99e14c59.chunk.js.map",
+    "main.js": "/tokyo-walker/static/js/main.a9326f48.chunk.js",
+    "main.js.map": "/tokyo-walker/static/js/main.a9326f48.chunk.js.map",
     "runtime-main.js": "/tokyo-walker/static/js/runtime-main.173271e0.js",
     "runtime-main.js.map": "/tokyo-walker/static/js/runtime-main.173271e0.js.map",
     "static/js/2.3d9c6c38.chunk.js": "/tokyo-walker/static/js/2.3d9c6c38.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.173271e0.js",
     "static/js/2.3d9c6c38.chunk.js",
     "static/css/main.929cfaa9.chunk.css",
-    "static/js/main.99e14c59.chunk.js"
+    "static/js/main.a9326f48.chunk.js"
   ]
 }
