@@ -4,6 +4,8 @@ body {
   overflow: hidden;
   font-family: "Dosis", sans-serif;
   font-size: 22px;
+  height: 100vh;
+  width: 100vw;
 }
 .root {
   box-sizing: border-box;
@@ -14,7 +16,6 @@ body {
   cursor: pointer;
   top: 10px;
   left: 10px;
-  /* color: cornflowerblue; */
 }
 
 .toggleVisible:hover {

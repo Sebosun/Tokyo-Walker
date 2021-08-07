@@ -1,9 +1,9 @@
 import ReactPlayer from "react-player";
 import { useContext } from "react";
-import AudioContext from "../../store/audio-context";
+import MusicContext from "../../store/music-context";
 
 const Audio = () => {
-  const audioCtx = useContext(AudioContext);
+  const audioCtx = useContext(MusicContext);
 
   return (
     <>

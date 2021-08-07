@@ -6,15 +6,20 @@
 }
 
 .label {
-  color: white;
   padding: 10px;
-  background: rgba(255, 99, 124, 0.7);
-  border-radius: 5px;
+
   border: 1px solid black;
+  border-radius: 5px;
+
+  color: white;
+  background: rgba(255, 99, 124, 0.7);
+
+  transition-duration: 0.5s;
 }
 
-.volume {
-  /* color: rgba(255, 99, 124, 0.7); */
+.label:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 99, 124, 0.9);
 }
 
 input[type="range"] {

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import AudioContext from "../../store/audio-context";
+import MusicContext from "../../store/music-context";
 import VolumeControl from "../ui/VolumeControl";
 import classes from "./MusicMenu.module.css";
 import music from "../../data/music.json";
 import Card from "../ui/Card";
 
 const MusicMenu = () => {
-  const audioCtx = useContext(AudioContext);
+  const audioCtx = useContext(MusicContext);
 
   const onVolumeChange = (e) => {
     audioCtx.changeVolume(e.target.value);
@@ -16,7 +16,11 @@ const MusicMenu = () => {
     let content = [];
     for (let genre in music) {
       content.push(
-        <Card onClick={() => audioCtx.selectRandom(genre)} key={genre}>
+        <Card
+          onClick={() => audioCtx.selectRandom(genre)}
+          key={genre}
+          role="button"
+        >
           {genre}
         </Card>
       );

@@ -4,7 +4,7 @@ const VolumeControl = (props) => {
   return (
     <div className={classes.volumeControl}>
       <label className={classes.label} htmlFor="volume">
-        Volume
+        volume
       </label>
       <input
         type="range"
