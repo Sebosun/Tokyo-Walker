@@ -4,12 +4,17 @@ import VolumeControl from "../ui/VolumeControl";
 import classes from "./MusicMenu.module.css";
 import music from "../../data/music.json";
 import Card from "../ui/Card";
+import { useDispatch, useSelector } from "react-redux";
+import { musicActions } from "../../store/redux/audio-slice";
 
 const MusicMenu = () => {
   const audioCtx = useContext(MusicContext);
 
+  const volume = useSelector((state) => state.audio.volume);
+  const dispatch = useDispatch();
+
   const onVolumeChange = (e) => {
-    audioCtx.changeVolume(e.target.value);
+    dispatch(musicActions.changeVolume(e.target.value));
   };
 
   const musicTypesGen = () => {
@@ -31,7 +36,7 @@ const MusicMenu = () => {
   return (
     <div>
       <Card className={classes.name}>{audioCtx.name}</Card>
-      <VolumeControl onVolumeChange={onVolumeChange} volume={audioCtx.volume} />
+      <VolumeControl onVolumeChange={onVolumeChange} volume={volume} />
       <p className={classes.type}>select music genre:</p>
       <div className={classes.wrapper}>{musicTypesGen()}</div>
     </div>

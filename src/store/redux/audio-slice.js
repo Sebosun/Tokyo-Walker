@@ -7,6 +7,7 @@ const musicSlice = createSlice({
     url: "https://soundcloud.com/jazzhopcafe/midnight-walk-lofi-jazzhop-chill-mix",
     playing: false,
     genre: "lofi",
+    volume: 50,
   },
   reducers: {
     playMusic(state) {
@@ -16,6 +17,9 @@ const musicSlice = createSlice({
     changeMusic(state, action) {
       state.name = action.payload.name;
       state.url = action.payload.url;
+    },
+    changeVolume(state, action) {
+      state.volume = action.payload;
     },
   },
 });

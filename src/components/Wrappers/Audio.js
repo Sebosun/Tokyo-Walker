@@ -5,15 +5,16 @@ import { useSelector } from "react-redux";
 
 const Audio = () => {
   const audioCtx = useContext(MusicContext);
-  const audioSelector = useSelector((state) => state.audio.playing);
+  const isPlaying = useSelector((state) => state.audio.playing);
+  const volume = useSelector((state) => state.audio.volume);
 
   return (
     <>
       <div className="audio-stream">
         <ReactPlayer
           className="audio"
-          playing={audioSelector}
-          volume={audioCtx.volume}
+          playing={isPlaying}
+          volume={volume}
           url={audioCtx.url}
           onEnded={audioCtx.selectRandom}
         />

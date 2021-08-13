@@ -16,8 +16,8 @@ const Menu = () => {
   const videoCtx = useContext(VideoContext);
   const musicCtx = useContext(MusicContext);
 
-  const playingRdx = useSelector((state) => state.audio.playing);
   const dispatch = useDispatch();
+  const isPlaying = useSelector((state) => state.audio.playing);
 
   const changeAudioHandler = () => {
     dispatch(musicActions.playMusic());
@@ -31,9 +31,9 @@ const Menu = () => {
         changeMute={videoCtx.changeMute}
         muted={videoCtx.muted}
         setPlayStatus={changeAudioHandler}
-        playing={playingRdx}
+        playing={isPlaying}
       />
-      {playingRdx && <MusicMenu />}
+      {isPlaying && <MusicMenu />}
 
       <Sources
         className={classes.sources}
