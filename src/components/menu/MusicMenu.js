@@ -9,9 +9,8 @@ import { musicActions } from "../../store/redux/audio-slice";
 import { selectRandomSong } from "../../store/redux/audio-slice";
 
 const MusicMenu = () => {
-  const audioCtx = useContext(MusicContext);
-
   const volume = useSelector((state) => state.audio.volume);
+  const songName = useSelector((state) => state.audio.name);
   const dispatch = useDispatch();
 
   const onVolumeChange = (e) => {
@@ -36,7 +35,7 @@ const MusicMenu = () => {
 
   return (
     <div>
-      <Card className={classes.name}>{audioCtx.name}</Card>
+      <Card className={classes.name}>{songName}</Card>
       <VolumeControl onVolumeChange={onVolumeChange} volume={volume} />
       <p className={classes.type}>select music genre:</p>
       <div className={classes.wrapper}>{musicTypesGen()}</div>

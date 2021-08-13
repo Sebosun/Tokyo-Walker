@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Audio from "./components/Wrappers/Audio";
+import Music from "./components/Wrappers/Music";
 import Video from "./components/Wrappers/Video";
 import Menu from "./components/Wrappers/Menu";
 import VideoProvider from "./store/VideoProvider";
@@ -17,7 +17,7 @@ function App() {
       <VideoProvider>
         <AudioProvider>
           <Video />
-          <Audio />
+          <Music />
           {menuVisible && <Menu />}
         </AudioProvider>
       </VideoProvider>

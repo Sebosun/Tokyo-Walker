@@ -4,8 +4,8 @@ import music from "../../data/music.json";
 const musicSlice = createSlice({
   name: "audio",
   initialState: {
-    name: "Midnight walk",
-    url: "https://soundcloud.com/jazzhopcafe/midnight-walk-lofi-jazzhop-chill-mix",
+    name: "Gf is a witch",
+    url: "https://www.youtube.com/watch?v=a-BgREkkjcg",
     playing: false,
     genre: "lofi",
     volume: 50,
@@ -32,7 +32,8 @@ const musicSlice = createSlice({
   },
 });
 
-export const selectRandomSong = (genre = "lofi") => {
+// since random int is a side effect im doing a custom reducer
+export const selectRandomSong = (genre) => {
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   };
