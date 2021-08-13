@@ -9,10 +9,19 @@ import Buttons from "../Wrappers/Buttons";
 
 import classes from "./Menu.module.css";
 import Sources from "./Sources";
+import { useDispatch, useSelector } from "react-redux";
+import { musicActions } from "../../store/redux/audio-slice";
 
 const Menu = () => {
   const videoCtx = useContext(VideoContext);
   const musicCtx = useContext(MusicContext);
+
+  const playingRdx = useSelector((state) => state.audio.playing);
+  const dispatch = useDispatch();
+
+  const changeAudioHandler = () => {
+    dispatch(musicActions.playMusic());
+  };
 
   return (
     <div className={classes.menu}>
@@ -21,10 +30,10 @@ const Menu = () => {
       <Buttons
         changeMute={videoCtx.changeMute}
         muted={videoCtx.muted}
-        setPlayStatus={musicCtx.setPlayStatus}
-        playing={musicCtx.playing}
+        setPlayStatus={changeAudioHandler}
+        playing={playingRdx}
       />
-      {musicCtx.playing && <MusicMenu />}
+      {playingRdx && <MusicMenu />}
 
       <Sources
         className={classes.sources}

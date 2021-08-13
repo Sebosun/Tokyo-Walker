@@ -40,7 +40,6 @@ const AudioProvider = (props) => {
   const audioContext = {
     name: audioState.name,
     url: audioState.url,
-    start: audioState.start,
     playing: isPlaying,
 
     setPlayStatus: playAudioHandler,
