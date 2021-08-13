@@ -6,6 +6,7 @@ import music from "../../data/music.json";
 import Card from "../ui/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { musicActions } from "../../store/redux/audio-slice";
+import { selectRandomSong } from "../../store/redux/audio-slice";
 
 const MusicMenu = () => {
   const audioCtx = useContext(MusicContext);
@@ -22,7 +23,7 @@ const MusicMenu = () => {
     for (let genre in music) {
       content.push(
         <Card
-          onClick={() => audioCtx.selectRandom(genre)}
+          onClick={() => dispatch(selectRandomSong(genre))}
           key={genre}
           role="button"
         >
