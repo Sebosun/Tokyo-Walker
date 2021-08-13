@@ -4,11 +4,11 @@ import music from "../../data/music.json";
 const musicSlice = createSlice({
   name: "audio",
   initialState: {
-    name: "Gf is a witch",
-    url: "https://www.youtube.com/watch?v=p9Ev6WtAciY",
+    name: "Indelible Ink",
+    url: "https://soundcloud.com/its_dreamy_yt/indelible-ink-lofi-hip-hop-chillout-chillhop-jazzhop",
     playing: false,
     genre: "lofi",
-    volume: 50,
+    volume: 100,
   },
   reducers: {
     // equlas to playAudioHandler
