@@ -8,6 +8,7 @@ const Music = () => {
   const volume = useSelector((state) => state.audio.volume);
   const url = useSelector((state) => state.audio.url);
   const stateGenre = useSelector((state) => state.audio.genre);
+
   return (
     <>
       <div className="audio-stream">

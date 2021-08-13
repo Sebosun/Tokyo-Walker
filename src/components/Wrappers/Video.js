@@ -1,10 +1,16 @@
-import VideoContext from "../../store/video-context";
 import ReactPlayer from "react-player";
+import { useSelector, useDispatch } from "react-redux";
+
 import "./Video.css";
-import { useContext } from "react";
+import { selectRandomVideo } from "../../store/redux/video-slice";
 
 const Video = () => {
-  const videoCtx = useContext(VideoContext);
+  const dispatch = useDispatch();
+
+  const muted = useSelector((state) => state.video.muted);
+  const url = useSelector((state) => state.video.url);
+  const start = useSelector((state) => state.video.start);
+  const country = useSelector((state) => state.video.country);
 
   return (
     <>
@@ -12,11 +18,9 @@ const Video = () => {
         <div className="video-foreground">
           <ReactPlayer
             volume={0.5}
-            url={`https://www.youtube.com/watch?v=${
-              videoCtx.url
-            }${`?t=${videoCtx.start}`}`}
-            muted={videoCtx.muted}
-            onEnded={videoCtx.selectRandom}
+            url={`https://www.youtube.com/watch?v=${url}${`?t=${start}`}`}
+            muted={muted}
+            onEnded={() => dispatch(selectRandomVideo(country))}
             playing={true}
           />
         </div>

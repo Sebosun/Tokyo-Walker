@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import MusicContext from "../../store/music-context";
+import React from "react";
 import VolumeControl from "../ui/VolumeControl";
 import classes from "./MusicMenu.module.css";
 import music from "../../data/music.json";

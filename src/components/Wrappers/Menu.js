@@ -1,8 +1,6 @@
-import { React, useContext } from "react";
+import { React } from "react";
 
-import VideoContext from "../../store/video-context";
-import MusicContext from "../../store/music-context";
-import VideoList from "../menu/VideoList";
+import VideoList from "../menu/VideoMenu";
 import MusicMenu from "../menu/MusicMenu";
 import Github from "../Wrappers/Github";
 import Buttons from "../Wrappers/Buttons";
@@ -11,16 +9,23 @@ import classes from "./Menu.module.css";
 import Sources from "./Sources";
 import { useDispatch, useSelector } from "react-redux";
 import { musicActions } from "../../store/redux/audio-slice";
+import { videoActions } from "../../store/redux/video-slice";
 
 const Menu = () => {
-  const videoCtx = useContext(VideoContext);
-  const musicCtx = useContext(MusicContext);
-
   const dispatch = useDispatch();
+
   const isPlaying = useSelector((state) => state.audio.playing);
+  const musicUrl = useSelector((state) => state.audio.url);
+
+  const isMuted = useSelector((state) => state.video.muted);
+  const videoUrl = useSelector((state) => state.video.url);
 
   const changeAudioHandler = () => {
     dispatch(musicActions.playMusic());
+  };
+
+  const changeMuteHandler = () => {
+    dispatch(videoActions.changeMute());
   };
 
   return (
@@ -28,8 +33,8 @@ const Menu = () => {
       <p className={classes.title}>Tokyo Walker</p>
       <VideoList />
       <Buttons
-        changeMute={videoCtx.changeMute}
-        muted={videoCtx.muted}
+        changeMute={changeMuteHandler}
+        muted={isMuted}
         setPlayStatus={changeAudioHandler}
         playing={isPlaying}
       />
@@ -37,8 +42,8 @@ const Menu = () => {
 
       <Sources
         className={classes.sources}
-        musicUrl={musicCtx.url}
-        videoUrl={videoCtx.url}
+        musicUrl={musicUrl}
+        videoUrl={videoUrl}
       />
       <Github />
     </div>

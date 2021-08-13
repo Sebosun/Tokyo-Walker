@@ -5,7 +5,7 @@ const musicSlice = createSlice({
   name: "audio",
   initialState: {
     name: "Gf is a witch",
-    url: "https://www.youtube.com/watch?v=a-BgREkkjcg",
+    url: "https://www.youtube.com/watch?v=p9Ev6WtAciY",
     playing: false,
     genre: "lofi",
     volume: 50,

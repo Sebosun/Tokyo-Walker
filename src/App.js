@@ -1,11 +1,10 @@
 import { useState } from "react";
-import "./App.css";
 import Music from "./components/Wrappers/Music";
 import Video from "./components/Wrappers/Video";
 import Menu from "./components/Wrappers/Menu";
 import VideoProvider from "./store/VideoProvider";
-import AudioProvider from "./store/MusicProvider";
 import { FaEye } from "react-icons/fa";
+import "./App.css";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(true);
@@ -15,11 +14,9 @@ function App() {
   return (
     <>
       <VideoProvider>
-        <AudioProvider>
-          <Video />
-          <Music />
-          {menuVisible && <Menu />}
-        </AudioProvider>
+        <Video />
+        <Music />
+        {menuVisible && <Menu />}
       </VideoProvider>
       <FaEye role="button" className="toggleVisible" onClick={menuHandler} />
     </>
